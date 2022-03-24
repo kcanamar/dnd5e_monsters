@@ -11,7 +11,15 @@ $button.on("click", () =>{
     .then((data) => { 
         console.log("you clicked", data)
         $('.name').text(data.name);
-        
+        const $type = $('<div class="type">')
+        $type.appendTo('.facts')
+        $type.text(`
+            Hit Points: ${data.hit_points} \n
+            Type: ${data.type} \n
+            Strength: ${data.strength}
+            Dexterity: ${data.dexterity}
+            `)
+        // $('.type').text(data.type);
     })
 
 })
