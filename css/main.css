@@ -29,39 +29,19 @@ header {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
 }
-.monster-display {
-    display: grid;
+#display {
+    display: flex;
     background-color:rgba(157, 119, 38, 0.564);
-    grid-template-areas: 
-    "one one one"
-    "two three four"
-    "two three five"
-    "two three six"
-    "seven seven seven";
-    
+    flex-direction: row;
+    text-align: center;
 }
-.photo {
-    width: 150px;
-    height: 150px;
-    grid-area: two;
-}
-.facts {
-    width: 150px;
-    height: 450px;
-    grid-area: three;
-}
-.info {
-    width: 300px;
-    height: 150px;
-    grid-area: four;
+.type {
+    width: 200px;
+    height: 100px;
+    flex: auto;
 }
 .skills {
-    width: 300px;
-    height: 150px;
-    grid-area: five;
-}
-.weak {
-    width: 300px;
-    height: 150px;
-    grid-area: six;
+    width: 100px;
+    height: 100px;
+    flex: auto;
 }
