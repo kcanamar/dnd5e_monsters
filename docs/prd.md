@@ -5,34 +5,28 @@
 **Summary**
 | Field | Detail |
 |-------|--------|
-| Project Name | {Put Project Name Here}|
-| Description | {One sentence summarizing what is the app and why it matters} |
-| Developers | {List of Developers} |
+| Project Name | Prototype|
+| Description | This app seeks to provide a searchable Monster index of Dungeons and Dragons 5th Edition. |
+| Developers | Kyle Canamar |
 | Live Website | {website of deployed application} |
 | Repo | {Link to git repository} |
 
 ## Problem Being Solved and Target Market
 
-Use this area to explain what problem your app is solving, and who are the people who have this problem.
+As a Dungeon Master having a visual database of all creatures at your fingertips will help drive great stories.
 
 ## User Stories
 
 List of stories users should experience when using your application.
 
-- Users should be able to see the site on desktop and mobile
-- Users can create an account
-- Users can sign in to their account
-- Users can create a new item
-- Users can see all their items on the dashboard
-- Users can update items
-- User can delete items
-
+- users can search the monsters in Dungeons and dragon 5th edition
+ 
 ## Route Tables
 
 For backend Applications you'll want to detail the different routes and types of your request your server can receive. There are three main things to define.
 
-- The endpoint: the URL to which the request must be made
-- The method: the type of http method the request should be
+- The endpoint: https://www.dnd5eapi.co/api/
+- The method: jQuery
 - The response: what the response should be, a web page, json data, etc.
 
 You should also include any additional notes on any special headers that may be used and so forth.
