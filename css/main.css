@@ -17,16 +17,23 @@ button {
    margin: 0px 0px 0px 30px;
    color: rgba(225, 225, 225, 0.945);
 }
-#monster-name {
-    display: ;
+header {
     justify-content: center;
-    width: 200px;
-    height: 100px;
+    grid-area: one;
+}
+#monster-name {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 .monster-display {
     display: grid;
     background-color:rgba(157, 119, 38, 0.564);
     grid-template-areas: 
+    "one one one"
     "two three four"
     "two three five"
     "two three six"
@@ -36,7 +43,7 @@ button {
 .photo {
     width: 150px;
     height: 150px;
-    grid-area: ;
+    grid-area: two;
 }
 .facts {
     width: 150px;

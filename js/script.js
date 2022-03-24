@@ -10,6 +10,8 @@ $button.on("click", () =>{
     $.ajax(`${API}/${$monsterName}`)
     .then((data) => { 
         console.log("you clicked", data)
+        $('.name').text(data.name);
+        
     })
 
 })
