@@ -1,4 +1,60 @@
 * {
-    background: rgba(110,110,255,.8
-    )
+    background: rgba(169, 156, 85, 0.564);
+}
+body{
+    align-content: center;
+}
+#main-title {
+    display: flex;
+    justify-content: center;
+}
+.search-bar {
+    margin: 2% 25% 2%;
+    display: flex;
+    justify-content: center;
+}
+button {
+   margin: 0px 0px 0px 30px;
+   color: rgba(225, 225, 225, 0.945);
+}
+#monster-name {
+    display: ;
+    justify-content: center;
+    width: 200px;
+    height: 100px;
+}
+.monster-display {
+    display: grid;
+    background-color:rgba(157, 119, 38, 0.564);
+    grid-template-areas: 
+    "two three four"
+    "two three five"
+    "two three six"
+    "seven seven seven";
+    
+}
+.photo {
+    width: 150px;
+    height: 150px;
+    grid-area: ;
+}
+.facts {
+    width: 150px;
+    height: 450px;
+    grid-area: three;
+}
+.info {
+    width: 300px;
+    height: 150px;
+    grid-area: four;
+}
+.skills {
+    width: 300px;
+    height: 150px;
+    grid-area: five;
+}
+.weak {
+    width: 300px;
+    height: 150px;
+    grid-area: six;
 }
