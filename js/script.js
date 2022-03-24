@@ -1,6 +1,6 @@
 const API ="https://www.dnd5eapi.co/api/monsters/"
-const $input = $('input')
 const $button = $('button')
+let $input = $('input')
 let $display = $('#display')
 
 $button.on("click", () =>{
@@ -45,5 +45,5 @@ $button.on("click", () =>{
         console.log(data.special_abilities)
         // $skills.text(`${data.special_abilities}`)
     })
-
+    $input.val("")
 })
