@@ -9,7 +9,7 @@
 | Description | This app seeks to provide a searchable Monster index of Dungeons and Dragons 5th Edition. |
 | Developers | Kyle Canamar |
 | Live Website | {website of deployed application} |
-| Repo | {Link to git repository} |
+| Repo | [GitRepo](https://github.com/kcanamar/dnd5e_monsters) |
 
 ## Problem Being Solved and Target Market
 

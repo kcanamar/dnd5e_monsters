@@ -20,20 +20,20 @@ $icon.on("click", () =>{
         $type.appendTo('.attributes')
         $type.html(`
             <h2 class="attribute">Attributes</h2>
-            Type: ${data.type} <br/>
-            Subtype: ${data.subtype} <br/>
-            Alignment: ${data.alignment} <br/>
-            Hit Dice: ${data.hit_dice} <br/>
-            Hit Points: ${data.hit_points} <br/>
-            XP: ${data.xp} <br/>
-            Challenger Rating: ${data.challenge_rating} <br/>
-            Armor Class: ${data.armor_class} <br/>
-            Constitution: ${data.constitution} <br/>
-            Charisma: ${data.charisma} <br/>
-            Dexterity: ${data.dexterity} <br/>
-            Intelligence: ${data.intelligence} <br/>
-            Strength: ${data.strength} <br/>
-            Wisdom: ${data.wisdom} <br/>
+            <a class="stat">Type</a>: ${data.type} <br/>
+            <a class="stat">Subtype</a>: ${data.subtype} <br/>
+            <a class="stat">Alignment</a>: ${data.alignment} <br/>
+            <a class="stat">Hit Dice</a>: ${data.hit_dice} <br/>
+            <a class="stat">Hit Points</a>: ${data.hit_points} <br/>
+            <a class="stat">XP</a>: ${data.xp} <br/>
+            <a class="stat">Challenger Rating</a>: ${data.challenge_rating} <br/>
+            <a class="stat">Armor Class</a>: ${data.armor_class} <br/>
+            <a class="stat">Constitution</a>: ${data.constitution} <br/>
+            <a class="stat">Charisma</a>: ${data.charisma} <br/>
+            <a class="stat">Dexterity</a>: ${data.dexterity} <br/>
+            <a class="stat">Intelligence</a>: ${data.intelligence} <br/>
+            <a class="stat">Strength</a>: ${data.strength} <br/>
+            <a class="stat">Wisdom</a>: ${data.wisdom} <br/>
         `)
         const $skillTitle = $('<h2 class="skills-title">Skills</h2>')
         $skillTitle.appendTo('.skills')

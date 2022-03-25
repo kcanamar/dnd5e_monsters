@@ -1,30 +1,76 @@
-* {
-    background: rgba(169, 156, 85, 0.564);
-}
+
 body{
     align-content: center;
-}
-.search-bar {
-    margin: 2% 25% 2%;
-    display: flex;
-    justify-content: center;
-}
-button {
-   margin: 0px 0px 0px 30px;
-   color: rgba(225, 225, 225, 0.945);
+    background-color: rgba(0, 0, 0, 0.845);
 }
 header {
     padding: 20px;
-    background:rgba(225, 225, 225, 0.845);
+    background:rgba(66, 59, 156, 0.845);
     margin: 0;
     border-radius: 15px;
     text-align: center;
 }
 header h1 {
-    font-size: 3.5em;
+    font-size: 5em;
     text-transform: uppercase;
     font-weight: 100;
-    color: rgb(147, 17, 2);
+    color: rgba(147, 108, 2, 0.913);
+    text-shadow: rgba(0, 0, 0, 0.845) 3px 3px;
+}
+.container {
+    height: 80px;
+    width: 100%;
+    border-radius: 40px;
+ 
+}
+.container .input {
+    border: 0;
+    border-radius: 50px;
+    outline: none;
+    color:rgb(255, 255, 255);
+    background:rgba(147, 108, 2, 0.658);
+}
+.search_wrap {
+    border-radius: 30px;
+    width: 500px;
+    margin: 30px auto;
+    
+}
+.search_wrap .search_box {
+    position: relative;
+    width: 500px;
+    height: 60px;
+    border-radius: 60%;
+}
+.search_wrap .search_box .input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    padding: 3px 10px;
+    border-radius: 30px;
+    font-size: 30px;
+}
+.search_wrap .search_box .btn{
+    position: absolute;
+    right: 0;
+    width: 50px;
+    /* background:rgb(147, 17, 2); */
+    z-index: 1;
+    border-radius: 30%;
+}
+.search_wrap .search_box .btn:hover{
+    background:rgb(106, 162, 16);
+    border-radius: 30%;
+}
+.search_wrap .search_box .btn.btn_common .fa-solid {
+    padding: .1em;
+    color:rgba(0, 0, 0, 0.845);
+    font-size: 40px
+}
+.search_wrap .search_box .input {
+    padding-right: 5%;
 }
 #monster-name {
     display: flex;
@@ -34,18 +80,27 @@ header h1 {
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
 }
+#monster-name .name {
+    font-size: 50px;
+    color:rgb(106, 162, 16);
+    text-shadow: rgba(0, 0, 0, 0.845) 2px 4px;
+}
 #display {
     display: flex;
-    background-color:rgba(157, 119, 38, 0.564);
+    background-color:rgba(189, 167, 42,);
     flex-direction: row;
     text-align: center;
     justify-content: space-around;
     margin: 0em 1em 0em 1em;
 }
 .column {
-    border: 1px black solid;
+    border: 6px rgb(42, 33, 67) solid;
     width: 30%;
     height: 300px;
     overflow-y: auto;
     position: relative;
+    color:rgba(116, 164, 4, 0.892)
+}
+.column .attribute h2 {
+    
 }
