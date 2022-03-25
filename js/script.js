@@ -19,20 +19,20 @@ $icon.on("click", () =>{
         $type.appendTo('.attributes')
         $type.html(`
             <h2 class="attribute">Attributes</h2>
-            <a class="stat">Type</a>: <a class="data-text">${data.type}</a> <br/>
-            <a class="stat">Subtype</a>: <a class="data-text">${data.subtype}</a> <br/>
-            <a class="stat">Alignment</a>: <a class="data-text">${data.alignment}</a> <br/>
-            <a class="stat">Hit Dice</a>: ${data.hit_dice} <br/>
-            <a class="stat">Hit Points</a>: ${data.hit_points} <br/>
-            <a class="stat">XP</a>: ${data.xp} <br/>
-            <a class="stat">Challenger Rating</a>: ${data.challenge_rating} <br/>
-            <a class="stat">Armor Class</a>: ${data.armor_class} <br/>
-            <a class="stat">Constitution</a>: ${data.constitution} <br/>
-            <a class="stat">Charisma</a>: ${data.charisma} <br/>
-            <a class="stat">Dexterity</a>: ${data.dexterity} <br/>
-            <a class="stat">Intelligence</a>: ${data.intelligence} <br/>
-            <a class="stat">Strength</a>: ${data.strength} <br/>
-            <a class="stat">Wisdom</a>: ${data.wisdom} <br/>
+            <a class="stat">Type</a>: <a class="data-text">${data.type}</a><br/>
+            <a class="stat">Subtype</a>: <a class="data-text">${data.subtype}</a><br/>
+            <a class="stat">Alignment</a>: <a class="data-text">${data.alignment}</a><br/>
+            <a class="stat">Hit Dice</a>: <a class="data-text">${data.hit_dice}</a><br/>
+            <a class="stat">Hit Points</a>: <a class="data-text">${data.hit_points}</a><br/>
+            <a class="stat">XP</a>: <a class="data-text">${data.xp}</a><br/>
+            <a class="stat">Challenger Rating</a>: <a class="data-text">${data.challenge_rating}</a><br/>
+            <a class="stat">Armor Class</a>: <a class="data-text">${data.armor_class}</a><br/>
+            <a class="stat">Constitution</a>: <a class="data-text">${data.constitution}</a><br/>
+            <a class="stat">Charisma</a>: <a class="data-text">${data.charisma}</a><br/>
+            <a class="stat">Dexterity</a>: <a class="data-text">${data.dexterity}</a><br/>
+            <a class="stat">Intelligence</a>: <a class="data-text">${data.intelligence}</a><br/>
+            <a class="stat">Strength</a>: <a class="data-text">${data.strength}</a><br/>
+            <a class="stat">Wisdom</a>: <a class="data-text">${data.wisdom}</a><br/>
         `)
         const $skillTitle = $('<h2 class="skills-title">Skills</h2>')
         $skillTitle.appendTo('.skills')

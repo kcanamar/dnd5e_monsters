@@ -100,8 +100,9 @@ header h1 {
 .column {
     border: 6px rgb(42, 33, 67) solid;
     width: 30%;
-    height: 300px;
+    height: 500px;
     overflow-y: auto;
+    overflow-x: auto;
     position: relative;
     color:rgba(116, 164, 4, 0.892)
 }
@@ -117,14 +118,15 @@ header h1 {
     margin-right: 5px;
     text-shadow:rgba(0, 0, 0, 0.845) 1px 1.5px;
     color:rgba(2, 147, 132, 0.913);
-    font-size: 16px;
+    font-size: 24px;
     font-weight: bold;
     letter-spacing: .5px;
+    justify-items: left;
 }
 .column h4.skill {
     text-shadow:rgba(0, 0, 0, 0.845) 1px 1.5px;
     color:rgba(2, 147, 132, 0.913);
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     letter-spacing: .25px;
     margin: 0;
@@ -132,10 +134,12 @@ header h1 {
 }
 .column a.data-text {
     text-transform: capitalize;
+    font-size: 24px;
 }
 .column a.skill-desc {
     color:rgba(147, 108, 2, 0.913);
     text-shadow: rgba(0, 0, 0, 0.845) 1px 1.4px;
+    font-size: 20px;
 }
 .column a.weak-item {
     text-shadow:rgba(0, 0, 0, 0.845) 2px 3px;
