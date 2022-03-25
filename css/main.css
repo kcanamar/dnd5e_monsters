@@ -4,10 +4,6 @@
 body{
     align-content: center;
 }
-#main-title {
-    display: flex;
-    justify-content: center;
-}
 .search-bar {
     margin: 2% 25% 2%;
     display: flex;
@@ -18,8 +14,18 @@ button {
    color: rgba(225, 225, 225, 0.945);
 }
 header {
-    justify-content: center;
-    grid-area: one;
+    padding: 20px;
+    background:rgba(225, 225, 225, 0.845);
+    margin: 0;
+    border-radius: 15px;
+    text-align: center;
+}
+header h1 {
+    font-size: 3.5em;
+    text-transform: uppercase;
+    font-weight: 100;
+    color: rgb(147, 17, 2);
+    
 }
 #monster-name {
     display: flex;
