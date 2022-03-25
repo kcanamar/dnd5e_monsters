@@ -2,14 +2,17 @@ const API = "https://www.dnd5eapi.co/api/monsters"
 const $icon = $('i')
 let $input = $('input')
 let $display = $('#display')
-let $skills = $('.skills')
-let $weak = $('.weakness')
-
+let $attributes = $('<div class="attributes column"></div>')
+let $skills = $('<div class="skills column"></div>')
+let $weakness = $('<div class="weakness column"></div>')
 $.ajax(`${API}`)
 .then((data) => { 
     console.log( data)
 })
 $icon.on("click", () =>{
+    $attributes.appendTo($display)
+    $skills.appendTo($display)
+    $weakness.appendTo($display)
     $display.children().empty()
     let $monsterName = $input.val();
     $monsterName = $monsterName.replaceAll(" ","-").toLowerCase();
@@ -41,7 +44,7 @@ $icon.on("click", () =>{
         arrayMagic(data.special_abilities, $skills)
         const $weakTitle = $('<h2 class="weak-title">Weaknesses</h2>')
         $weakTitle.appendTo('.weakness')
-        weakMagic(data.damage_immunities, $weak)
+        weakMagic(data.damage_immunities, $weakness)
     })
     $input.val("")
 })
