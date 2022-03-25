@@ -41,4 +41,6 @@ header {
     border: 1px black solid;
     width: 30%;
     height: 300px;
+    overflow-y: auto;
+    position: relative;
 }

@@ -3,7 +3,12 @@ const $button = $('button')
 let $input = $('input')
 let $display = $('#display')
 let $skills = $('.skills')
+let $weak = $('.weakness')
 
+$.ajax(`${API}`)
+.then((data) => { 
+    console.log( data)
+})
 $button.on("click", () =>{
     $display.children().empty()
     let $monsterName = $input.val();
@@ -16,6 +21,7 @@ $button.on("click", () =>{
         const $type = $('<div class="type">')
         $type.appendTo('.attributes')
         $type.html(`
+            <h2 class="attribute">Attributes</h2>
             Type: ${data.type} <br/>
             Subtype: ${data.subtype} <br/>
             Alignment: ${data.alignment} <br/>
@@ -32,19 +38,22 @@ $button.on("click", () =>{
             Wisdom: ${data.wisdom} <br/>
         `)
         // skills list build
-        actionsMagic(data.actions, $skills)
+        arrayMagic(data.actions, $skills)
+        arrayMagic(data.special_abilities, $skills)
+        // objMagic(data.)
         // weakness list build
+        weakMagic(data.damage_immunities, $weak)
 
     })
-    $input.val("")
+    $input.val("adult blue dragon")
 })
-function actionsMagic(data, div) {
+function arrayMagic(data, div) {
     for (let obj of data) {
-        $(`<p>${obj.name} - ${obj.desc}</p>`).appendTo(div)
+        $(`<h4 class="skill">${obj.name}</h4><p><a class="skill-desc">${obj.desc}</a></p>`).appendTo(div)
     }
 }
-function spcAbilityMagic (data, div) {
-    for (let obj in data) {
-        $(`<p>${obj.name} - ${obj.desc}</p>`).appendTo(div)
+function weakMagic(data, div) {
+    for (let obj of data) {
+        $(`<h4 class="skill">Weakness</h4><p><a class="skill-desc">${obj}</a></p>`).appendTo(div)
     }
 }
