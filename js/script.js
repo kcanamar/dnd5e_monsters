@@ -1,5 +1,5 @@
 const API = "https://www.dnd5eapi.co/api/monsters"
-const $button = $('button')
+const $icon = $('i')
 let $input = $('input')
 let $display = $('#display')
 let $skills = $('.skills')
@@ -9,15 +9,13 @@ $.ajax(`${API}`)
 .then((data) => { 
     console.log( data)
 })
-$button.on("click", () =>{
+$icon.on("click", () =>{
     $display.children().empty()
     let $monsterName = $input.val();
     $monsterName = $monsterName.replaceAll(" ","-").toLowerCase();
     $.ajax(`${API}/${$monsterName}`)
     .then((data) => { 
-        console.log("you clicked", data)
         $('.name').text(data.name);
-        // attributes list build
         const $type = $('<div class="type">')
         $type.appendTo('.attributes')
         $type.html(`
@@ -37,15 +35,15 @@ $button.on("click", () =>{
             Strength: ${data.strength} <br/>
             Wisdom: ${data.wisdom} <br/>
         `)
-        // skills list build
+        const $skillTitle = $('<h2 class="skills-title">Skills</h2>')
+        $skillTitle.appendTo('.skills')
         arrayMagic(data.actions, $skills)
         arrayMagic(data.special_abilities, $skills)
-        // objMagic(data.)
-        // weakness list build
+        const $weakTitle = $('<h2 class="weak-title">Weaknesses</h2>')
+        $weakTitle.appendTo('.weakness')
         weakMagic(data.damage_immunities, $weak)
-
     })
-    $input.val("adult blue dragon")
+    $input.val("")
 })
 function arrayMagic(data, div) {
     for (let obj of data) {
@@ -54,6 +52,6 @@ function arrayMagic(data, div) {
 }
 function weakMagic(data, div) {
     for (let obj of data) {
-        $(`<h4 class="skill">Weakness</h4><p><a class="skill-desc">${obj}</a></p>`).appendTo(div)
+        $(`<p><a class="skill-desc">${obj}</a></p>`).appendTo(div)
     }
 }
