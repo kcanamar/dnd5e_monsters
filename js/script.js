@@ -20,9 +20,9 @@ $icon.on("click", () =>{
         $type.appendTo('.attributes')
         $type.html(`
             <h2 class="attribute">Attributes</h2>
-            <a class="stat">Type</a>: ${data.type} <br/>
-            <a class="stat">Subtype</a>: ${data.subtype} <br/>
-            <a class="stat">Alignment</a>: ${data.alignment} <br/>
+            <a class="stat">Type</a>: <a class="data-text">${data.type}</a> <br/>
+            <a class="stat">Subtype</a>: <a class="data-text">${data.subtype}</a> <br/>
+            <a class="stat">Alignment</a>: <a class="data-text">${data.alignment}</a> <br/>
             <a class="stat">Hit Dice</a>: ${data.hit_dice} <br/>
             <a class="stat">Hit Points</a>: ${data.hit_points} <br/>
             <a class="stat">XP</a>: ${data.xp} <br/>
@@ -52,6 +52,6 @@ function arrayMagic(data, div) {
 }
 function weakMagic(data, div) {
     for (let obj of data) {
-        $(`<p><i class="fa-solid fa-dice-d6"></i><a class="weak-item">${obj}</a></p>`).appendTo(div)
+        $(`<p><i class="fa-solid fa-skull"></i><a class="weak-item">${obj}</a></p>`).appendTo(div)
     }
 }
