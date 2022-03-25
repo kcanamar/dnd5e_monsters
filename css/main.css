@@ -34,14 +34,11 @@ header {
     background-color:rgba(157, 119, 38, 0.564);
     flex-direction: row;
     text-align: center;
+    justify-content: space-around;
+    margin: 0em 1em 0em 1em;
 }
-.type {
-    width: 200px;
-    height: 100px;
-    flex: auto;
-}
-.skills {
-    width: 100px;
-    height: 100px;
-    flex: auto;
+.column {
+    border: 1px black solid;
+    width: 30%;
+    height: 300px;
 }

@@ -1,10 +1,11 @@
-const API ="https://www.dnd5eapi.co/api/monsters/"
+const API = "https://www.dnd5eapi.co/api/monsters"
 const $button = $('button')
 let $input = $('input')
 let $display = $('#display')
+let $skills = $('.skills')
 
 $button.on("click", () =>{
-    $display.empty()
+    $display.children().empty()
     let $monsterName = $input.val();
     $monsterName = $monsterName.replaceAll(" ","-").toLowerCase();
     $.ajax(`${API}/${$monsterName}`)
@@ -13,9 +14,8 @@ $button.on("click", () =>{
         $('.name').text(data.name);
         // attributes list build
         const $type = $('<div class="type">')
-        $type.appendTo('#display')
+        $type.appendTo('.attributes')
         $type.html(`
-            <h3 class="attr">Attributes</h3>
             Type: ${data.type} <br/>
             Subtype: ${data.subtype} <br/>
             Alignment: ${data.alignment} <br/>
@@ -32,18 +32,19 @@ $button.on("click", () =>{
             Wisdom: ${data.wisdom} <br/>
         `)
         // skills list build
-        const $skills = $('<div class="skills"></div>')
-        $skills.appendTo('#display')
-        $skills.html(`
-            <h3 class="ski">Skills</h3>
-            Actions: ${data.actions}<br/> 
-            Legendary Actions: ${data.legendary_actions}<br/> 
-            Senses: ${data.senes}<br/> 
-            Speed: ${data.speed}<br/> 
-            Special Abilities: ${data.special_abilities}<br/> 
-            `)
-        console.log(data.special_abilities)
-        // $skills.text(`${data.special_abilities}`)
+        actionsMagic(data.actions, $skills)
+        // weakness list build
+
     })
     $input.val("")
 })
+function actionsMagic(data, div) {
+    for (let obj of data) {
+        $(`<p>${obj.name} - ${obj.desc}</p>`).appendTo(div)
+    }
+}
+function spcAbilityMagic (data, div) {
+    for (let obj in data) {
+        $(`<p>${obj.name} - ${obj.desc}</p>`).appendTo(div)
+    }
+}
