@@ -5,10 +5,6 @@ let $display = $('#display')
 let $attributes = $('<div class="attributes column"></div>')
 let $skills = $('<div class="skills column"></div>')
 let $weakness = $('<div class="weakness column"></div>')
-$.ajax(`${API}`)
-.then((data) => { 
-    console.log( data)
-})
 $icon.on("click", () =>{
     $attributes.appendTo($display)
     $skills.appendTo($display)
