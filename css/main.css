@@ -101,6 +101,22 @@ header h1 {
     position: relative;
     color:rgba(116, 164, 4, 0.892)
 }
-.column .attribute h2 {
-    
+.column h2.attribute, .column h2.skills-title, .column h2.weak-title  {
+    margin: 0;
+    text-decoration: underline rgba(162, 84, 25, 0.845);
+    text-decoration-thickness: 3px;
+    text-shadow:rgba(0, 0, 0, 0.845) 1px 1.5px;
+    color:rgba(216, 173, 79, 0.845);
+    font-size: 40px;
+}
+.column a.stat {
+    margin-right: 5px;
+    text-shadow:rgba(0, 0, 0, 0.845) 1px 1.5px;
+    color:rgba(2, 147, 132, 0.913);
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+.column h4.skill {
+    background: white;
 }
