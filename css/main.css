@@ -12,14 +12,18 @@ header {
 }
 header h1 {
     font-size: 5em;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: 100;
     color: rgba(147, 108, 2, 0.913);
     text-shadow: rgba(0, 0, 0, 0.845) 3px 3px;
+    margin: 0;
+    padding: 0;
 }
 .container {
-    height: 80px;
+    height: 60px;
     width: 100%;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     border-radius: 40px;
  
 }
@@ -77,13 +81,14 @@ header h1 {
     justify-content: center;
     width: auto;
     height: auto;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 10px 0px;
     padding: 0px 0px 0px 0px;
 }
 #monster-name .name {
     font-size: 50px;
     color:rgb(106, 162, 16);
     text-shadow: rgba(0, 0, 0, 0.845) 2px 4px;
+    margin: 0;
 }
 #display {
     display: flex;
@@ -118,5 +123,26 @@ header h1 {
     letter-spacing: .5px;
 }
 .column h4.skill {
-    background: white;
+    text-shadow:rgba(0, 0, 0, 0.845) 1px 1.5px;
+    color:rgba(2, 147, 132, 0.913);
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: .25px;
+    margin: 0;
+    border: 2px rgba(156, 59, 59, 0.845) dotted;
+}
+.column a.skill-desc {
+    color:rgba(147, 108, 2, 0.913);
+    text-shadow: rgba(0, 0, 0, 0.845) 1px 1.4px;
+}
+.column a.weak-item {
+    text-shadow:rgba(0, 0, 0, 0.845) 2px 3px;
+    color:rgba(207, 115, 211, 0.913);
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.fa-dice-d6 {
+    font-size: 25px;
+    color:rgba(2, 147, 132, 0.913);
 }

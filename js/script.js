@@ -52,6 +52,6 @@ function arrayMagic(data, div) {
 }
 function weakMagic(data, div) {
     for (let obj of data) {
-        $(`<p><a class="skill-desc">${obj}</a></p>`).appendTo(div)
+        $(`<p><i class="fa-solid fa-dice-d6"></i><a class="weak-item">${obj}</a></p>`).appendTo(div)
     }
 }
