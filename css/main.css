@@ -154,3 +154,13 @@ header h1 {
     margin: 0px 20px 0px 0px;
     text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
 }
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  }
