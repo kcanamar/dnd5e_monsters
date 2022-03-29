@@ -8,21 +8,44 @@ let $weakness = $('<div class="weakness column"></div>')
 let $monstOpt = $('.custom-select')
 let $optName = $('.option-name')
 
-$.ajax(`${API}`).then((data) => {
-    console.log(data)
-    console.log(data.results[0].name)
-    arrayList(data, $monstOpt)
-})
 
 $icon.on("click", () => {
-    $attributes.appendTo($display)
-    $skills.appendTo($display)
-    $weakness.appendTo($display)
-    $display.children().empty()
+    getMonsterData()
+    $input.val("")
+})
+
+
+function optListPopulator () {
+    $.ajax(`${API}`).then((data) => {
+        arrayList(data, $monstOpt)
+    })
+}
+function arrayMagic(data, div) {
+    for (let obj of data) {
+        $(`<h4 class="skill">${obj.name}</h4><p><a class="skill-desc">${obj.desc}</a></p>`).appendTo(div)
+    }
+}
+function weakMagic(data, div) {
+    for (let obj of data) {
+        $(`<p><i class="fa-solid fa-skull"></i><a class="weak-item">${obj}</a></p>`).appendTo(div)
+    }
+}
+function arrayList(data, selection) {
+    for (let i = 0; i < 332; i++) {
+        const $option = $('<option class="option-name">');
+        $option.text(`${data.results[i].name}`);
+        $option.appendTo(selection);
+    }
+}
+function getMonsterData() {
     let $monsterName = $input.val();
     $monsterName = $monsterName.replaceAll(" ","-").toLowerCase();
     $.ajax(`${API}/${$monsterName}`)
     .then((data) => { 
+        $attributes.appendTo($display)
+        $skills.appendTo($display)
+        $weakness.appendTo($display)
+        $display.children().empty()
         $('.name').text(data.name);
         const $type = $('<div class="type">')
         $type.appendTo('.attributes')
@@ -50,23 +73,9 @@ $icon.on("click", () => {
         const $weakTitle = $('<h2 class="weak-title">Weaknesses</h2>')
         $weakTitle.appendTo('.weakness')
         weakMagic(data.damage_immunities, $weakness)
+    }).catch((error) => {
+        alert(`The name you entered was ${$input.val()}is not recognized please try again`)
+        $input.val("")
     })
-    $input.val("")
-})
-function arrayMagic(data, div) {
-    for (let obj of data) {
-        $(`<h4 class="skill">${obj.name}</h4><p><a class="skill-desc">${obj.desc}</a></p>`).appendTo(div)
-    }
-}
-function weakMagic(data, div) {
-    for (let obj of data) {
-        $(`<p><i class="fa-solid fa-skull"></i><a class="weak-item">${obj}</a></p>`).appendTo(div)
-    }
-}
-function arrayList(data, selection) {
-    for (let i = 0; i < 332; i++) {
-        const $option = $('<option class="option-name">');
-        $option.text(`${data.results[i].name}`);
-        $option.appendTo(selection);
-    }
-}
+
+} 
