@@ -5,7 +5,16 @@ let $display = $('#display')
 let $attributes = $('<div class="attributes column"></div>')
 let $skills = $('<div class="skills column"></div>')
 let $weakness = $('<div class="weakness column"></div>')
-$icon.on("click", () =>{
+let $monstOpt = $('.custom-select')
+let $optName = $('.option-name')
+
+$.ajax(`${API}`).then((data) => {
+    console.log(data)
+    console.log(data.results[0].name)
+    arrayList(data, $monstOpt)
+})
+
+$icon.on("click", () => {
     $attributes.appendTo($display)
     $skills.appendTo($display)
     $weakness.appendTo($display)
@@ -52,5 +61,12 @@ function arrayMagic(data, div) {
 function weakMagic(data, div) {
     for (let obj of data) {
         $(`<p><i class="fa-solid fa-skull"></i><a class="weak-item">${obj}</a></p>`).appendTo(div)
+    }
+}
+function arrayList(data, selection) {
+    for (let i = 0; i < 332; i++) {
+        const $option = $('<option class="option-name">');
+        $option.text(`${data.results[i].name}`);
+        $option.appendTo(selection);
     }
 }

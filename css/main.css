@@ -1,5 +1,6 @@
 
 body{
+    display: flexbox;
     align-content: center;
     background-color: rgba(0, 0, 0, 0.845);
 }
@@ -164,3 +165,11 @@ header h1 {
     background-color: rgba(0, 0, 0, .5);
     box-shadow: 0 0 1px rgba(255, 255, 255, .5);
   }
+
+#monster-listr, .custom-select {
+    width: 30%;
+    padding: 5px;
+    margin: 10px 0 10px 0;
+    display: flex;
+    justify-content: center;
+}
