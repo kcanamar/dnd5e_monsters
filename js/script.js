@@ -8,12 +8,14 @@ let $weakness = $('<div class="weakness column"></div>')
 let $monstOpt = $('.custom-select')
 let $optName = $('.option-name')
 
-
+optListPopulator()
+$monstOpt.on("click", (event) =>{
+    console.log(event.target)
+})
 $icon.on("click", () => {
     getMonsterData()
     $input.val("")
 })
-
 
 function optListPopulator () {
     $.ajax(`${API}`).then((data) => {
@@ -32,8 +34,9 @@ function weakMagic(data, div) {
 }
 function arrayList(data, selection) {
     for (let i = 0; i < 332; i++) {
-        const $option = $('<option class="option-name">');
+        const $option = $('<option class="option-name" value="">');
         $option.text(`${data.results[i].name}`);
+        $option.attr('value', date.results[i].name);
         $option.appendTo(selection);
     }
 }
