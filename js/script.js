@@ -9,11 +9,7 @@ let $monstOpt = $('.custom-select')
 let $options = $('option')
 
 optListPopulator()
-// console.dir()
-// on input or on change for drop down box to change api call
-// $monstOpt.on("change", (event) => {
-//     console.log(event.target.name)
-// })
+
 function optVal() {
     $input.val($monstOpt.val())
     getMonsterData()
@@ -88,8 +84,11 @@ function getMonsterData() {
         weakMagic(data.damage_immunities, $weakness)
     }).catch((error) => {
         $display.empty()
-        alert(`The name you entered was not recognized please try again`)
-        $input.val("")
+        const $error = "Invalid Input"
+        $input.attr("placeholder", $error)
+        setTimeout(() => {
+        $input.attr("placeholder", "Search...")
+        }, 3000)
     })
 
 } 
