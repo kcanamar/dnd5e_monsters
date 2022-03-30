@@ -87,7 +87,7 @@ header h1 {
 }
 #monster-name .name {
     font-size: 50px;
-    color:rgb(106, 162, 16);
+    color:#74ee37;
     text-shadow: rgba(0, 0, 0, 0.845) 2px 4px;
     margin: 0;
 }
@@ -112,14 +112,14 @@ header h1 {
     margin: 0px 0px 6px 0px;
     text-decoration: underline rgba(162, 84, 25, 0.845);
     text-decoration-thickness: 2.75px;
-    text-shadow:rgba(0, 0, 0, 0.845) 1px 1.5px;
-    color:#87C38F;
-    font-size: 40px;
+    text-shadow:rgba(0, 0, 0, 0.845) 1.15px 1.5px;
+    color:#f0be6e;
+    font-size: 30px;
 }
 .column a.stat {
     margin-right: 5px;
     text-shadow:rgba(0, 0, 0, 0.845) 1px 1.5px;
-    color:#226F54;
+    color:#a7718f;
     font-size: 24px;
     font-weight: bold;
     letter-spacing: .5px;
@@ -127,7 +127,7 @@ header h1 {
 }
 .column h4.skill {
     text-shadow:rgba(0, 0, 0, 0.845) 1px 1.5px;
-    color:rgba(2, 147, 132, 0.913);
+    color:#a7718f;
     font-size: 24px;
     font-weight: bold;
     letter-spacing: .25px;
@@ -175,7 +175,7 @@ header h1 {
 .monster-list {
     display: block;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 375px) {
   body {
     background-color: #43291f;
   }
@@ -183,13 +183,57 @@ header h1 {
       font-size: 8px;
   }
   .container, .search_wrap .search_box, .input {
-      width: 450px;
+      width: 20em;
   }
   .column {
-      width: 450px;
+      width: 20em;
   }
   #display {
       display: flex;
       flex-flow: column;
   }
+  .column a.stat {
+    color:#226F54;
+  }
+  .column h2.attribute, .column h2.skills-title, .column h2.weak-title  {
+    color:#87C38F;
+  }
+  #monster-name .name {
+      font-size: 25px;
+      display: flex;
+      flex-flow: wrap;
+      color:#37eee2;
+  }
 }
+@media only screen and (max-width: 820px) {
+    body {
+      background-color: #43291f;
+      width: 36.8em;
+    }
+    header {
+        font-size: 8px;
+    }
+    .container, .search_wrap .search_box, .input {
+        width: 32.5em;
+        margin: 0px 0px 0px 0px;
+    }
+    .column {
+        width: 32.5em;
+    }
+    #display {
+        display: flex;
+        flex-flow: column;
+    }
+    .column a.stat {
+      color:#226F54;
+    }
+    .column h2.attribute, .column h2.skills-title, .column h2.weak-title  {
+      color:#87C38F;
+    }
+    #monster-name .name {
+        font-size: 25px;
+        display: flex;
+        flex-flow: wrap;
+        color:#37eee2;
+    }
+  }
