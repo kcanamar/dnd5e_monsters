@@ -6,10 +6,22 @@ This app seeks to provide a searchable Monster index of Dungeons and Dragons 5th
 
 HTML 
 CSS
+JavaScript
 Jquery
 https://www.dnd5eapi.co/api/
+Font Awesome
+CdnFonts
 
 ☐ Screenshot(s): Images of your actual app.
+# Current Version
+Version 1.0.2
+Page at load [Load]()
+- Improved Color Contrast [Theme]()
+- Drop List Functionality [Options]()
+Mobile Resposivness [Mobile]()
+
+### Past Versions
+Version 1.0.1
 
 Page at initialization [Load](./page_load.png)
 - Input Functionality [Input](./page_user_input.png)
@@ -19,7 +31,6 @@ Search functionality [Scroll](./page_scroll_display.png)
 ☐ Getting Started: In this section include the link to your deployed app and any instructions you deem important.
 
 [Website](https://dnd5e-monster-codex.netlify.app/)
-Be sure to use the correct indexing of creatures being searched
 
 ☐ Future Enhancements: Features you plan to implement later.
 
@@ -27,6 +38,3 @@ browsing funtionality
 Create broswer menu 
 predictive input text funcionality
 alpabitized search filter functionality 
-
-Note: Don't underestimate the value of a well crafted README.md.
-The README.mdintroduces your project to prospective employers and forms their first impression of your work!
