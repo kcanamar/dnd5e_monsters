@@ -12,21 +12,22 @@ https://www.dnd5eapi.co/api/
 Font Awesome
 CdnFonts
 
-☐ Screenshot(s): Images of your actual app.
 # Current Version
+
 Version 1.0.2
-Page at load [Load]()
-- Improved Color Contrast [Theme]()
-- Drop List Functionality [Options]()
-Mobile Resposivness [Mobile]()
+Page at load [Load](./screenshots/page_load_v2.png)
+- Improved Color Contrast [Theme](./screenshots/color_scheme_v2.png)
+- Drop List Functionality [Options](./screenshots/drop_list.png)
+Mobile Resposivness [Mobile](./screenshots/mobile.png)
 
 ### Past Versions
+
 Version 1.0.1
 
-Page at initialization [Load](./page_load.png)
-- Input Functionality [Input](./page_user_input.png)
-- [Search](./page_search_success.png)
-Search functionality [Scroll](./page_scroll_display.png)
+Page at initialization [Load](./screenshots/page_load.png)
+- Input Functionality [Input](./screenshots/page_user_input.png)
+- [Search](./screenshots/page_search_success.png)
+Search functionality [Scroll](./screenshots/page_scroll_display.png)
 
 ☐ Getting Started: In this section include the link to your deployed app and any instructions you deem important.
 
