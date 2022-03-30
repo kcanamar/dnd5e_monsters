@@ -6,18 +6,27 @@ let $attributes = $('<div class="attributes column"></div>')
 let $skills = $('<div class="skills column"></div>')
 let $weakness = $('<div class="weakness column"></div>')
 let $monstOpt = $('.custom-select')
-let $optName = $('.option-name')
+let $options = $('option')
 
 optListPopulator()
-$monstOpt.on("click", (event) =>{
-    console.log(event.target)
-})
+// console.dir()
+// on input or on change for drop down box to change api call
+// $monstOpt.on("change", (event) => {
+//     console.log(event.target.name)
+// })
+function optVal() {
+    $input.val($monstOpt.val())
+    getMonsterData()
+    $input.val("")
+}
 $icon.on("click", () => {
     getMonsterData()
     $input.val("")
 })
-
 function optListPopulator () {
+    let $option = $('<option name="one" class="option-placeholder" value=""></option>')
+    $option.text("Chose From the Monster List")
+    $option.appendTo($monstOpt)
     $.ajax(`${API}`).then((data) => {
         arrayList(data, $monstOpt)
     })
@@ -36,7 +45,8 @@ function arrayList(data, selection) {
     for (let i = 0; i < 332; i++) {
         const $option = $('<option class="option-name" value="">');
         $option.text(`${data.results[i].name}`);
-        $option.attr('value', date.results[i].name);
+        $option.attr('value', data.results[i].name);
+        $option.attr('name', data.results[i].name);
         $option.appendTo(selection);
     }
 }
@@ -77,7 +87,8 @@ function getMonsterData() {
         $weakTitle.appendTo('.weakness')
         weakMagic(data.damage_immunities, $weakness)
     }).catch((error) => {
-        alert(`The name you entered was ${$input.val()}is not recognized please try again`)
+        $display.empty()
+        alert(`The name you entered was not recognized please try again`)
         $input.val("")
     })
 

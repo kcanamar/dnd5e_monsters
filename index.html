@@ -18,7 +18,7 @@
     <div class="container">
         <div class="search_wrap">
             <div class="search_box">
-                <input type="text" class="input" placeholder="Search....">
+                <input type="text" class="input" class="input-text" placeholder="Search....">
                 <div class="btn btn_common">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
@@ -27,8 +27,7 @@
     </div>
     <div id="monster-selector">
         <div class="monster-list">
-            <label for="drop-list">Select a Monster from the List below;</label>
-            <select name="drop-list" class="custom-select">
+            <select onchange="optVal()" name="drop-list" class="custom-select">
             </select>
         </div>
     </div>
